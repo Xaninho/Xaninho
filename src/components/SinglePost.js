@@ -38,15 +38,15 @@ export default function SinglePost() {
   if (!singlePost) return <div>Loading...</div>;
 
   return (
-    <main className="bg-gray-200 min-h-screen p-12">
-      <article className="container shadow-lg mx-auto bg-green-100 rounded-lg">
+    <main className="bg-gray-900 min-h-screen p-12">
+      <article className="container shadow-lg mx-auto bg-gray-800 rounded-lg">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
-            <div className="bg-white bg-opacity-75 rounded p-12">
-              <h1 className="text-3xl lg:text-6xl mb-4">
+            <div className="bg-black bg-opacity-50 rounded p-12">
+              <h1 className="text-3xl text-white lg:text-6xl mb-4">
                 {singlePost.title}
               </h1>
-              <div className="flex justify-center text-gray-800">
+              <div className="flex justify-center text-gray-100">
                 <img
                   src={urlFor(singlePost.authorImage).url()}
                   alt={singlePost.name}
@@ -65,7 +65,7 @@ export default function SinglePost() {
             style={{ height: "400px" }}
           />
         </header>
-        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full text-white">
           <BlockContent
             blocks={singlePost.body}
             projectId="r99w5jgb"
