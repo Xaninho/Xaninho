@@ -39,10 +39,10 @@ export default function SinglePost() {
 
   return (
     <main className="bg-gray-900 min-h-screen p-12">
-      <article className="container shadow-lg mx-auto bg-gray-800 rounded-lg">
+      <article className="container shadow-lg mx-auto bg-gray-800 rounded-lg text-white">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
-            <div className="bg-black bg-opacity-50 rounded p-12">
+            <div className="bg-gray-900 bg-opacity-90 rounded p-12">
               <h1 className="text-3xl text-white lg:text-6xl mb-4">
                 {singlePost.title}
               </h1>
