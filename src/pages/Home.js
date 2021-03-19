@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
+import Sidebar from "../components/homescreen/Sidebar";
 import Navbar from "../components/homescreen/Navbar";
 import Hero from "../components/homescreen/HeroSection";
-import Sidebar from "../components/homescreen/Sidebar";
+import LatestPosts from "../components/homescreen/LatestPosts";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,7 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Hero />
+      <LatestPosts />
     </div>
 
     /*<div>
