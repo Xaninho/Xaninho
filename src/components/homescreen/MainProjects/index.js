@@ -1,0 +1,94 @@
+import React, { useState, useEffect } from "react";
+import sanityClient from "../../../client";
+
+import {
+  InfoContainer,
+  InfoWrapper,
+  InfoRow,
+  Column1,
+  Column2,
+  TextWrapper,
+  TopLine,
+  Heading,
+  Subtitle,
+  BtnWrap,
+  ImgWrap,
+  Img,
+  Button,
+  SectionTitle,
+  ProjectContainer,
+} from "./MainProjectsElements";
+
+const MainProjects = () => {
+  const [projectData, setProject] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "project"] | [favorite] {
+            title,
+            overview,
+            description,
+            link,
+            tags,
+            projectLogo{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            }
+        }`
+      )
+      .then((data) => setProject(data))
+      .catch(console.error);
+  }, []);
+
+  return (
+    <div>
+      <ProjectContainer id="projects">
+        <SectionTitle>Project Highlights</SectionTitle>
+        {projectData &&
+          projectData.map((project, index) => (
+            <InfoContainer>
+              <InfoWrapper>
+                <InfoRow imgStart={true}>
+                  <Column1>
+                    <TextWrapper>
+                      <TopLine>{project.overview}</TopLine>
+                      <Heading lightText={true}>{project.title}</Heading>
+                      <Subtitle darkText={true}>{project.description}</Subtitle>
+
+                      <BtnWrap>
+                        <Button
+                          href="www.google.pt"
+                          target="_blank"
+                          smooth={true}
+                          duration={500}
+                          spy={true}
+                          exact={true}
+                          offset={-80}
+                          primary={true ? 1 : 0}
+                          dark={true ? 1 : 0}
+                          dark2={true ? 1 : 0}
+                        >
+                          Visitar
+                        </Button>
+                      </BtnWrap>
+                    </TextWrapper>
+                  </Column1>
+                  <Column2>
+                    <ImgWrap>
+                      <Img src={project.projectLogo.asset.url} />
+                    </ImgWrap>
+                  </Column2>
+                </InfoRow>
+              </InfoWrapper>
+            </InfoContainer>
+          ))}
+      </ProjectContainer>
+    </div>
+  );
+};
+
+export default MainProjects;

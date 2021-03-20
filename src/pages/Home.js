@@ -4,6 +4,7 @@ import Sidebar from "../components/homescreen/Sidebar";
 import Navbar from "../components/homescreen/Navbar";
 import Hero from "../components/homescreen/HeroSection";
 import LatestPosts from "../components/homescreen/LatestPosts";
+import MainProjects from "../components/homescreen/MainProjects";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,7 @@ const Home = () => {
       <Navbar toggle={toggle} />
       <Hero />
       <LatestPosts />
+      <MainProjects />
     </div>
 
     /*<div>
