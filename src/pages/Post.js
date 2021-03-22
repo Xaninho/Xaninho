@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import Sidebar from "../components/homescreen/Sidebar";
 import Navbar from "../components/homescreen/Navbar";
 import Footer from "../components/homescreen/Footer";
-import Posts from "../components/blog/Posts/Posts";
+import SinglePost from "../components/blog/SinglePost";
 
-const Blog = () => {
+const Post = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -14,12 +14,13 @@ const Blog = () => {
 
   return (
     <div>
+      {console.log("eai")};
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <Posts />
+      <SinglePost />
       <Footer />
     </div>
   );
 };
 
-export default Blog;
+export default Post;
