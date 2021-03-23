@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 import Sidebar from "../components/homescreen/Sidebar";
 import Navbar from "../components/homescreen/Navbar";
+import Project from "../components/projects/Projects";
 import Footer from "../components/homescreen/Footer";
-import SinglePost from "../components/blog/SinglePost";
 
-const Post = () => {
+const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -16,10 +16,10 @@ const Post = () => {
     <div>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <SinglePost />
+      <Project />
       <Footer />
     </div>
   );
 };
 
-export default Post;
+export default Projects;
