@@ -15,8 +15,9 @@ import {
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, noTransparent }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [transparency, setTransparency] = useState(noTransparent);
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -35,9 +36,19 @@ const Navbar = ({ toggle }) => {
   };
 
   return (
-    <Nav scrollNav={scrollNav}>
+    <Nav
+      scrollNav={scrollNav}
+      transparency={transparency}
+      style={transparency ? { background: "#f5f5f5" } : {}}
+    >
       <NavbarContainer>
-        <NavbarLogo to="/" onClick={toggleHome} scrollNav={scrollNav}>
+        <NavbarLogo
+          to="/"
+          onClick={toggleHome}
+          scrollNav={scrollNav}
+          style={transparency ? { color: "#353535" } : {}}
+          transparency={transparency}
+        >
           Xaninho
         </NavbarLogo>
         <MobileIcon onClick={toggle}>
@@ -46,47 +57,43 @@ const Navbar = ({ toggle }) => {
         <NavMenu>
           <NavItem>
             <NavLinks
-              to="blog"
-              smooth={true}
-              duration={500}
-              spy={true}
+              to="/blog"
               exact="true"
               offset={-80}
               scrollNav={scrollNav}
+              style={transparency ? { color: "#353535" } : {}}
             >
               Blog
             </NavLinks>
           </NavItem>
           <NavItem>
             <NavLinks
-              to="projects"
-              smooth={true}
-              duration={500}
-              spy={true}
+              to="/projects"
               exact="true"
               offset={-80}
               scrollNav={scrollNav}
+              style={transparency ? { color: "#353535" } : {}}
             >
               Projects
             </NavLinks>
           </NavItem>
         </NavMenu>
 
-        <NavMenu>
+        <NavMenu scrollNav={scrollNav} transparency={transparency}>
           <SocialIcon
             url="https://www.linkedin.com/in/xaninho-dev"
             className="mr-4"
             target="_blank"
-            fgColor="#fff"
-            style={{ height: 35, width: 35 }}
+            fgColor={scrollNav ? "#353535" : "#f5f5f5"}
+            bgColor="transparent"
+            style={{ height: 50, width: 50 }}
           />
           <SocialIcon
             url="https://github.com/Xaninho"
-            className="mr-4"
             target="_blank"
-            fgColor="#f5f5f5"
-            bgColor="#353535"
-            style={{ height: 35, width: 35 }}
+            fgColor={scrollNav ? "#353535" : "#f5f5f5"}
+            bgColor="transparent"
+            style={{ height: 50, width: 50 }}
           />
         </NavMenu>
       </NavbarContainer>

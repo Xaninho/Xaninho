@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const PostContainer = styled.div`
   height: 100%;
@@ -6,7 +7,7 @@ export const PostContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #cbf7ee;
+  background: #c7eff9;
 `;
 
 export const PostWrapper = styled.div`
@@ -27,14 +28,14 @@ export const PostWrapper = styled.div`
   }
 `;
 
-export const PostCard = styled.div`
+export const PostCard = styled(LinkR)`
   background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  max-height: 500px;
+  height: 370px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
   &:hover {
@@ -70,7 +71,7 @@ export const PostDescription = styled.div``;
 export const PostDate = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #353535;
+  color: #555555;
   text-align: center;
 `;
 
@@ -78,7 +79,6 @@ export const PostTitle = styled.h2`
   font-size: 1.1rem;
   margin-bottom: 10px;
   color: #353535;
-  font-family: "Philosopher";
   font-weight: bold;
   text-align: center;
 `;

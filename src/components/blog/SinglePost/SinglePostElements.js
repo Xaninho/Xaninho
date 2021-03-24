@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SinglePostContainer = styled.div`
   height: 100%;
-  background: #cbf7ee;
+  background: #f5f5f5;
 `;
 
 export const SinglePostWrapper = styled.article`
@@ -11,25 +11,30 @@ export const SinglePostWrapper = styled.article`
   margin-right: auto;
 `;
 
-export const ImageWrapper = styled.div`
-  padding-top: 80px;
+export const PostImage = styled.img`
+  padding-top: 100px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  object-fit: cover;
+  width: 100%;
+  max-height: 470px;
 `;
 
 export const SinglePostInfo = styled.div``;
 
 export const SinglePostTitle = styled.h1`
   font-family: "Philosopher";
+  color: #353535;
   font-size: 50px;
 `;
 
 export const SinglePostDate = styled.h3`
-  color: black;
+  color: #555555;
 `;
 
 export const SinglePostExcerpt = styled.div`
-  color: black;
+  color: #353535;
 `;
 
 export const BlockContentWrapper = styled.div`

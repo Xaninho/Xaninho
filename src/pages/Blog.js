@@ -15,7 +15,7 @@ const Blog = () => {
   return (
     <div>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar toggle={toggle} noTransparent={true} />
       <Posts />
       <Footer />
     </div>

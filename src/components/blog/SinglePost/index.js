@@ -4,7 +4,7 @@ import sanityClient from "../../../client";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import {
-  ImageWrapper,
+  PostImage,
   SinglePostContainer,
   SinglePostWrapper,
   SinglePostInfo,
@@ -51,9 +51,10 @@ const SinglePost = () => {
   return (
     <SinglePostContainer>
       <SinglePostWrapper>
-        <ImageWrapper>
-          <img src={singlePost.mainImage.asset.url} alt={singlePost.title} />
-        </ImageWrapper>
+        <PostImage
+          src={singlePost.mainImage.asset.url}
+          alt={singlePost.title}
+        ></PostImage>
         <SinglePostInfo>
           <SinglePostTitle>{singlePost.title}</SinglePostTitle>
           <SinglePostExcerpt>{singlePost.excerpt}</SinglePostExcerpt>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Link as Scroll } from "react-scroll";
+import { Link as Scroll } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
   background-color: #101522;
@@ -20,15 +20,15 @@ export const FooterLinksContainer = styled.div`
   display: flex;
   margin-left: 80px;
   justify-content: center;
-  @media screen and (max-width: 820px) {
-    padding-top: 32px;
+  @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-left: 0px;
   }
 `;
 
 export const FooterLinksWrapper = styled.div`
   display: flex;
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -42,7 +42,9 @@ export const FooterLinkItems = styled.div`
   width: 160px;
   box-sizing: border-box;
   color: #f5f5f5;
-  @media screen and (maz-width: 420px) {
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    align-items: center;
     margin: 0;
     padding: 10px;
     width: 100%;
@@ -60,7 +62,7 @@ export const FooterLink = styled(Link)`
   margin-bottom: 0.5rem;
   font-size: 14px;
   &:hover {
-    color: #00b5ad;
+    color: #14a3c7;
     transition: 0.3s ease-out;
   }
 `;
@@ -72,7 +74,7 @@ export const FooterLinkScroll = styled(Scroll)`
   font-size: 14px;
   cursor: pointer;
   &:hover {
-    color: #00b5ad;
+    color: #14a3c7;
     transition: 0.3s ease-out;
   }
 `;
@@ -84,7 +86,7 @@ export const FooterLinkExternal = styled.a`
   font-size: 14px;
   cursor: pointer;
   &:hover {
-    color: #00b5ad;
+    color: #14a3c7;
     transition: 0.3s ease-out;
   }
 `;

@@ -33,8 +33,8 @@ const HeroSection = () => {
           <HeroH1>Alexandre Neves</HeroH1>
           <HeroP>
             Name is Alexandre, but my friends call me Xaninho for short!
-            Currently focusing on learning Front-End Web Development. Love
-            exercise, mindfulness and anime.
+            Currently a bit of a Full-Stack Web Developer. I love exercise,
+            mindfulness and anime.
           </HeroP>
           <HeroBtnWrapper>
             <Button

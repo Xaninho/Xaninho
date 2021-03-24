@@ -1,18 +1,15 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const PostContainer = styled.div`
-  height: 800px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #cbf7ee;
-  @media screen and (max-width: 768px) {
-    height: 1100px;
-  }
-  @media screen and (max-width: 480px) {
-    height: 1300px;
-  }
+  background: #f5f5f5;
+  padding-top: 50px;
+  padding-bottom: 50px;
 `;
 
 export const PostWrapper = styled.div`
@@ -32,14 +29,14 @@ export const PostWrapper = styled.div`
   }
 `;
 
-export const PostCard = styled.div`
+export const PostCard = styled(LinkR)`
   background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  max-height: 500px;
+  height: 370px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
   &:hover {
@@ -63,7 +60,7 @@ export const SectionTitle = styled.h1`
   font-size: 2.5rem;
   color: #353535;
   margin-bottom: 64px;
-  font-family: "Playfair Display";
+  font-family: "Philosopher";
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -74,7 +71,7 @@ export const PostDescription = styled.div``;
 export const PostDate = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #353535;
+  color: #555555;
   text-align: center;
 `;
 
@@ -82,7 +79,6 @@ export const PostTitle = styled.h2`
   font-size: 1.1rem;
   margin-bottom: 10px;
   color: #353535;
-  font-family: "Philosopher";
   font-weight: bold;
   text-align: center;
 `;
@@ -92,4 +88,26 @@ export const PostExcerpt = styled.p`
   text-align: center;
   margin: 20px;
   color: #353535;
+`;
+
+export const Button = styled(LinkR)`
+  margin-top: 40px;
+  border-radius: 50px;
+  background: transparent;
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
+  color: #14a3c7;
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: 3px solid #14a3c7;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #14a3c7;
+    color: #f5f5f5;
+  }
 `;

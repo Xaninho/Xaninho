@@ -1,11 +1,9 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? "#f5f5f5" : "#cbf7ee")};
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
+  background: ${({ lightBg }) => (lightBg ? "#f5f5f5" : "#c7eff9")};
 `;
 
 export const ProjectContainer = styled.div`
@@ -13,18 +11,18 @@ export const ProjectContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #cbf7ee;
+  background: #c7eff9;
 `;
 
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 600px;
+  height: 100%;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 24px;
+  margin-bottom: 50px;
   justify-content: center;
 `;
 
@@ -59,11 +57,12 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.p`
-  color: #00b5ad;
+  color: #14a3c7;
   line-height: 16px;
   font-weight: 700px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  font-family: "Philosopher";
   margin-bottom: 16px;
 `;
 
@@ -72,8 +71,8 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#353535")};
-  font-family: "Playfair Display";
+  color: #353535;
+  font-family: "Philosopher";
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
@@ -83,6 +82,7 @@ export const SectionTitle = styled.h1`
   font-size: 2.5rem;
   color: #353535;
   margin-bottom: 64px;
+  margin-top: 40px;
   font-family: "Playfair Display";
   @media screen and (max-width: 480px) {
     font-size: 2rem;
@@ -90,7 +90,6 @@ export const SectionTitle = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  margin-width: 440px;
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
@@ -114,13 +113,14 @@ export const Img = styled.img`
 
 export const Button = styled.a`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? "#00b5ad" : "#353535")};
+  background: transparent;
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: ${({ dark }) => (dark ? "#010606" : "#f5f5f5")};
+  margin-bottom: ${({ bottom }) => (bottom ? "60px" : "0")};
+  color: #14a3c7;
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
-  border: none;
+  border: 3px solid #14a3c7;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -128,6 +128,7 @@ export const Button = styled.a`
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? "#fff" : "#00b5ad")};
+    background: #14a3c7;
+    color: #f5f5f5;
   }
 `;

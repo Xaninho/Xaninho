@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar toggle={toggle} noTransparent={false} />
       <Hero />
       <LatestPosts />
       <MainProjects />

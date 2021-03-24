@@ -31,19 +31,9 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Website</FooterLinkTitle>
-              <FooterLinkScroll
-                onClick={toggleHome}
-                smooth={true}
-                duration={500}
-              >
-                About
-              </FooterLinkScroll>
-              <FooterLinkScroll to="discover" smooth={true} duration={500}>
-                Posts
-              </FooterLinkScroll>
-              <FooterLinkScroll to="services" smooth={true} duration={500}>
-                Projects
-              </FooterLinkScroll>
+              <FooterLinkScroll to="/">Home</FooterLinkScroll>
+              <FooterLinkScroll to="/blog">Blog</FooterLinkScroll>
+              <FooterLinkScroll to="/projects">Projects</FooterLinkScroll>
             </FooterLinkItems>
           </FooterLinksWrapper>
 
@@ -105,10 +95,18 @@ const Footer = () => {
               Xaninho © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" aria-label="LinkedIn">
+              <SocialIconLink
+                href="https://www.linkedin.com/in/xaninho-dev/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
                 <FaLinkedin />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Github">
+              <SocialIconLink
+                href="https://github.com/Xaninho"
+                target="_blank"
+                aria-label="Github"
+              >
                 <FaGithub />
               </SocialIconLink>
             </SocialIcons>

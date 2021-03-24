@@ -58,10 +58,9 @@ const MainProjects = () => {
                       <TopLine>{project.overview}</TopLine>
                       <Heading lightText={true}>{project.title}</Heading>
                       <Subtitle darkText={true}>{project.description}</Subtitle>
-
                       <BtnWrap>
                         <Button
-                          href="www.google.pt"
+                          href={project.link}
                           target="_blank"
                           smooth={true}
                           duration={500}
@@ -72,7 +71,7 @@ const MainProjects = () => {
                           dark={true ? 1 : 0}
                           dark2={true ? 1 : 0}
                         >
-                          Visitar
+                          Visit
                         </Button>
                       </BtnWrap>
                     </TextWrapper>
@@ -86,6 +85,16 @@ const MainProjects = () => {
               </InfoWrapper>
             </InfoContainer>
           ))}
+        <Button
+          to="/projects"
+          offset={-80}
+          primary={true ? 1 : 0}
+          dark={true ? 1 : 0}
+          dark2={true ? 1 : 0}
+          bottom={true}
+        >
+          All Projects
+        </Button>
       </ProjectContainer>
     </div>
   );

@@ -15,7 +15,7 @@ const Projects = () => {
   return (
     <div>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar toggle={toggle} noTransparent={true} />
       <Project />
       <Footer />
     </div>

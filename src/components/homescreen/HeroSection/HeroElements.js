@@ -62,10 +62,11 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroImage = styled.div`
-  width: 300px;
+  width: 250px;
   margin: 30px;
   border-radius: 50%;
   overflow: hidden;
+  filter: brightness(90%);
 
   @media screen and (max-width: 768px) {
     width: 200px;
@@ -77,6 +78,7 @@ export const HeroDescription = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
+  text-shadow: 5px 5px 10px #000;
   color: #f5f5f5;
   font-size: 65px;
   font-family: "Philosopher";
@@ -89,9 +91,10 @@ export const HeroH1 = styled.h1`
 `;
 
 export const HeroP = styled.p`
+  text-shadow: 5px 5px 10px #000;
   margin-top: 24px;
   color: #f5f5f5;
-  font-size: 24px;
+  font-size: 25px;
   max-width: 600px;
   @media screen and (max-width: 768px) {
     font-size: 24px;
@@ -114,20 +117,22 @@ export const HeroBtnWrapper = styled.div`
 
 export const Button = styled.a`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? "#00b5ad" : "#353535")};
+  background: ${({ primary }) => (primary ? "transparent" : "#14a3c7")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: ${({ dark }) => (dark ? "#010606" : "#f5f5f5")};
+  color: #f5f5f5;
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
-  border: none;
+  border: 3px solid #f5f5f5;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.1rem;
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? "#fff" : "#00b5ad")};
+    background: ${({ primary }) => (primary ? "#14a3c7" : "#fff")};
+    border: 3px solid #14a3c7;
   }
 `;

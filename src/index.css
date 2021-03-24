@@ -4,3 +4,13 @@
 .prose {
   max-width: 100%;
 }
+
+.prose p,
+li {
+  color: #353535;
+}
+
+.prose h2 {
+  font-family: "Philosopher";
+  color: #353535;
+}

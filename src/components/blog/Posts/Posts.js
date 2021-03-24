@@ -43,7 +43,7 @@ const Posts = () => {
       <PostWrapper>
         {postData &&
           postData.map((post, index) => (
-            <PostCard>
+            <PostCard to={"/blog/" + post.slug.current}>
               <PostImage src={post.mainImage.asset.url}></PostImage>
               <PostDescription>
                 <PostTitle>{post.title}</PostTitle>

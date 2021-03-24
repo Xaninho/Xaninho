@@ -15,7 +15,7 @@ const Post = () => {
   return (
     <div>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar toggle={toggle} noTransparent={true} />
       <SinglePost />
       <Footer />
     </div>
