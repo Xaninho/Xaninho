@@ -1,0 +1,61 @@
+import React, { useState } from "react";
+import Video from "../../../assets/videos/herovideo.mp4";
+import PfPic from "../../../assets/images/xaninho.jpg";
+import PDF from "../../../assets/CV.pdf";
+
+import {
+  HeroContainer,
+  HeroBg,
+  VideoBg,
+  HeroContent,
+  HeroH1,
+  HeroP,
+  HeroBtnWrapper,
+  HeroImage,
+  HeroDescription,
+  Button,
+} from "./HeroElements";
+
+const HeroSection = () => {
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
+
+  return (
+    <HeroContainer>
+      <HeroBg>
+        <VideoBg autoPlay loop muted src={Video} type="video.mp4" />
+      </HeroBg>
+      <HeroContent>
+        <HeroDescription>
+          <HeroH1>Alexandre Neves</HeroH1>
+          <HeroP>
+            Name is Alexandre, but my friends call me Xaninho for short!
+            Currently a bit of a Full-Stack Web Developer. I love exercise,
+            mindfulness and anime.
+          </HeroP>
+          <HeroBtnWrapper>
+            <Button
+              onMouseEnter={onHover}
+              onMouseLeave={onHover}
+              primary="true"
+              dark="true"
+              href={PDF}
+              target="_blank"
+              download
+            >
+              Download CV
+            </Button>
+          </HeroBtnWrapper>
+        </HeroDescription>
+        <HeroImage>
+          <img src={PfPic} />
+        </HeroImage>
+      </HeroContent>
+    </HeroContainer>
+  );
+};
+
+export default HeroSection;

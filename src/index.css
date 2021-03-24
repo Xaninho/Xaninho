@@ -1,20 +1,16 @@
 @import url("https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.2.x/dist/typography.min.css");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 
-.prose img {
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
+.prose {
+  max-width: 100%;
 }
 
-.home-name {
-  font-size: 150px;
+.prose p,
+li {
+  color: #353535;
 }
 
 .prose h2 {
-  color: white;
-}
-
-.prose h3 {
-  color: white;
+  font-family: "Philosopher";
+  color: #353535;
 }
