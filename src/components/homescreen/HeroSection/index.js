@@ -32,9 +32,8 @@ const HeroSection = () => {
         <HeroDescription>
           <HeroH1>Alexandre Neves</HeroH1>
           <HeroP>
-            Name is Alexandre, but my friends call me Xaninho for short!
-            Currently a bit of a Full-Stack Web Developer. I love exercise,
-            mindfulness and anime.
+            O nome é Alexandre, mas os meus amigos chamam-me Xaninho! Atualmente
+            um Full-Stack Developer. Adoro exercício, mindfulness e anime.
           </HeroP>
           <HeroBtnWrapper>
             <Button
@@ -46,7 +45,7 @@ const HeroSection = () => {
               target="_blank"
               download
             >
-              Download CV
+              Transferir CV
             </Button>
           </HeroBtnWrapper>
         </HeroDescription>

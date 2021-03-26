@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectsContainer = styled.main`
   height: 100%;
-  background: #c7eff9;
+  background: #cbf7ee;
 `;
 
 export const ProjectsTitle = styled.h1`
@@ -66,7 +66,7 @@ export const ProjectTitle = styled.h2`
 export const ProjectOverview = styled.h3`
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #14a3c7;
+  color: #00b5ad;
   text-align: center;
 `;
 
@@ -80,11 +80,11 @@ export const Button = styled.a`
   background: transparent;
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: #14a3c7;
+  color: #00b5ad;
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
   margin-top: auto;
-  border: 3px solid #14a3c7;
+  border: 3px solid #00b5ad;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -92,7 +92,7 @@ export const Button = styled.a`
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #14a3c7;
+    background: #00b5ad;
     color: #f5f5f5;
   }
 `;

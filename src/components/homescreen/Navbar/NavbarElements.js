@@ -40,7 +40,7 @@ export const NavbarLogo = styled(LinkR)`
   transition: 0.8s all ease;
 
   &:hover {
-    color: #14a3c7;
+    color: #00b5ad;
   }
 `;
 
@@ -55,7 +55,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #14a3c7;
+    color: #00b5ad;
   }
 `;
 
@@ -88,33 +88,24 @@ export const NavLinks = styled(LinkR)`
     border-bottom: 3px solid #01bf71;
   }
   &:hover {
-    color: #14a3c7;
+    color: #00b5ad;
   }
 `;
 
-export const NavBtn = styled.nav`
+export const NavLinksExternal = styled.a`
+  height: 80px;
   display: flex;
   align-items: center;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-export const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: #14a3c7;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #010606;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
   text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  color: ${({ scrollNav }) => (scrollNav ? "#343434" : "#f5f5f5")};
+  transition: 0.8s all ease;
+  &.active {
+    border-bottom: 3px solid #01bf71;
+  }
   &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    color: #00b5ad;
   }
 `;

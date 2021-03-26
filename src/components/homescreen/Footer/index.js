@@ -31,9 +31,9 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Website</FooterLinkTitle>
-              <FooterLinkScroll to="/">Home</FooterLinkScroll>
+              <FooterLinkScroll to="/">Início</FooterLinkScroll>
               <FooterLinkScroll to="/blog">Blog</FooterLinkScroll>
-              <FooterLinkScroll to="/projects">Projects</FooterLinkScroll>
+              <FooterLinkScroll to="/projects">Projetos</FooterLinkScroll>
             </FooterLinkItems>
           </FooterLinksWrapper>
 
@@ -69,7 +69,7 @@ const Footer = () => {
 
           <FooterLinksWrapper>
             <FooterLinkItems>
-              <FooterLinkTitle>Contacts</FooterLinkTitle>
+              <FooterLinkTitle>Contactos</FooterLinkTitle>
               <FooterLinkExternal
                 href="https://www.linkedin.com/in/xaninho-dev/"
                 target="_blank"
@@ -89,10 +89,10 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
-              Xaninho
+              Portfolio
             </SocialLogo>
             <WebsiteRights>
-              Xaninho © {new Date().getFullYear()} All rights reserved.
+              Alexandre Neves © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
             <SocialIcons>
               <SocialIconLink

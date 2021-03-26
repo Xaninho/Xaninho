@@ -96,10 +96,10 @@ export const Button = styled(LinkR)`
   background: transparent;
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
-  color: #14a3c7;
+  color: #00b5ad;
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
-  border: 3px solid #14a3c7;
+  border: 3px solid #00b5ad;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -107,7 +107,7 @@ export const Button = styled(LinkR)`
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #14a3c7;
+    background: #00b5ad;
     color: #f5f5f5;
   }
 `;

@@ -3,7 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? "#f5f5f5" : "#c7eff9")};
+  background: ${({ lightBg }) => (lightBg ? "#f5f5f5" : "#cbf7ee")};
 `;
 
 export const ProjectContainer = styled.div`
@@ -11,7 +11,7 @@ export const ProjectContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #c7eff9;
+  background: #cbf7ee;
 `;
 
 export const InfoWrapper = styled.div`
@@ -57,7 +57,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.p`
-  color: #14a3c7;
+  color: #00b5ad;
   line-height: 16px;
   font-weight: 700px;
   letter-spacing: 1.4px;
@@ -111,16 +111,16 @@ export const Img = styled.img`
   margin: auto;
 `;
 
-export const Button = styled.a`
+export const Button = styled(LinkR)`
   border-radius: 50px;
   background: transparent;
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
   margin-bottom: ${({ bottom }) => (bottom ? "60px" : "0")};
-  color: #14a3c7;
+  color: #00b5ad;
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
-  border: 3px solid #14a3c7;
+  border: 3px solid #00b5ad;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -128,7 +128,7 @@ export const Button = styled.a`
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #14a3c7;
+    background: #00b5ad;
     color: #f5f5f5;
   }
 `;

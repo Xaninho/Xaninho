@@ -39,7 +39,7 @@ const Posts = () => {
 
   return (
     <PostContainer id="services">
-      <SectionTitle>Blog Posts</SectionTitle>
+      <SectionTitle>Blog</SectionTitle>
       <PostWrapper>
         {postData &&
           postData.map((post, index) => (

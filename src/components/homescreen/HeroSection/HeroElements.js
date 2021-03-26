@@ -117,7 +117,7 @@ export const HeroBtnWrapper = styled.div`
 
 export const Button = styled.a`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? "transparent" : "#14a3c7")};
+  background: ${({ primary }) => (primary ? "transparent" : "#00b5ad")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
   color: #f5f5f5;
@@ -132,7 +132,7 @@ export const Button = styled.a`
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? "#14a3c7" : "#fff")};
-    border: 3px solid #14a3c7;
+    background: ${({ primary }) => (primary ? "#00b5ad" : "#fff")};
+    border: 3px solid #00b5ad;
   }
 `;

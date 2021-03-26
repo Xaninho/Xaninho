@@ -10,8 +10,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavBtn,
-  NavBtnLink,
+  NavLinksExternal,
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -49,7 +48,7 @@ const Navbar = ({ toggle, noTransparent }) => {
           style={transparency ? { color: "#353535" } : {}}
           transparency={transparency}
         >
-          Xaninho
+          Alexandre
         </NavbarLogo>
         <MobileIcon onClick={toggle}>
           <FaBars />
@@ -74,12 +73,37 @@ const Navbar = ({ toggle, noTransparent }) => {
               scrollNav={scrollNav}
               style={transparency ? { color: "#353535" } : {}}
             >
-              Projects
+              Projetos
             </NavLinks>
           </NavItem>
         </NavMenu>
 
-        <NavMenu scrollNav={scrollNav} transparency={transparency}>
+        <NavMenu>
+          <NavItem>
+            <NavLinksExternal
+              href="https://www.linkedin.com/in/alexandre-hacker"
+              target="_blank"
+              offset={-80}
+              scrollNav={scrollNav}
+              style={transparency ? { color: "#353535" } : {}}
+            >
+              LinkedIn
+            </NavLinksExternal>
+          </NavItem>
+          <NavItem>
+            <NavLinksExternal
+              href="https://github.com/Xaninho"
+              target="_blank"
+              offset={-80}
+              scrollNav={scrollNav}
+              style={transparency ? { color: "#353535" } : {}}
+            >
+              Github
+            </NavLinksExternal>
+          </NavItem>
+        </NavMenu>
+
+        {/*<NavMenu scrollNav={scrollNav} transparency={transparency}>
           <SocialIcon
             url="https://www.linkedin.com/in/xaninho-dev"
             className="mr-4"
@@ -95,7 +119,7 @@ const Navbar = ({ toggle, noTransparent }) => {
             bgColor="transparent"
             style={{ height: 50, width: 50 }}
           />
-        </NavMenu>
+        </NavMenu>*/}
       </NavbarContainer>
     </Nav>
   );

@@ -7,7 +7,7 @@ export const PostContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #c7eff9;
+  background: #cbf7ee;
 `;
 
 export const PostWrapper = styled.div`
