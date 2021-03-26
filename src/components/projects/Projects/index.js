@@ -40,7 +40,7 @@ export default function Project() {
 
   return (
     <ProjectsContainer>
-      <ProjectsTitle>Projects</ProjectsTitle>
+      <ProjectsTitle>Projetos</ProjectsTitle>
       <ProjectsWrapper>
         {projectData &&
           projectData.map((project, index) => (

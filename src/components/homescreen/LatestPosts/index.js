@@ -40,7 +40,7 @@ const LatestPosts = () => {
 
   return (
     <PostContainer id="services">
-      <SectionTitle>Latest Blog Posts</SectionTitle>
+      <SectionTitle>Últimas Publicações</SectionTitle>
       <PostWrapper>
         {postData &&
           postData.map((post, index) => (
@@ -54,7 +54,7 @@ const LatestPosts = () => {
             </PostCard>
           ))}
       </PostWrapper>
-      <Button to="/blog">All Posts</Button>
+      <Button to="/blog">Todas as Publicações</Button>
     </PostContainer>
   );
 };

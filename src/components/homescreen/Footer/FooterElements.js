@@ -62,7 +62,7 @@ export const FooterLink = styled(Link)`
   margin-bottom: 0.5rem;
   font-size: 14px;
   &:hover {
-    color: #14a3c7;
+    color: #00b5ad;
     transition: 0.3s ease-out;
   }
 `;
@@ -74,7 +74,7 @@ export const FooterLinkScroll = styled(Scroll)`
   font-size: 14px;
   cursor: pointer;
   &:hover {
-    color: #14a3c7;
+    color: #00b5ad;
     transition: 0.3s ease-out;
   }
 `;
@@ -86,7 +86,7 @@ export const FooterLinkExternal = styled.a`
   font-size: 14px;
   cursor: pointer;
   &:hover {
-    color: #14a3c7;
+    color: #00b5ad;
     transition: 0.3s ease-out;
   }
 `;

@@ -47,7 +47,7 @@ const MainProjects = () => {
   return (
     <div>
       <ProjectContainer id="projects">
-        <SectionTitle>Project Highlights</SectionTitle>
+        <SectionTitle>Projetos Principais</SectionTitle>
         {projectData &&
           projectData.map((project, index) => (
             <InfoContainer>
@@ -71,7 +71,7 @@ const MainProjects = () => {
                           dark={true ? 1 : 0}
                           dark2={true ? 1 : 0}
                         >
-                          Visit
+                          Visitar
                         </Button>
                       </BtnWrap>
                     </TextWrapper>
@@ -93,7 +93,7 @@ const MainProjects = () => {
           dark2={true ? 1 : 0}
           bottom={true}
         >
-          All Projects
+          Todos os Projetos
         </Button>
       </ProjectContainer>
     </div>
