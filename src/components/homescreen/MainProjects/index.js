@@ -15,6 +15,7 @@ import {
   ImgWrap,
   Img,
   Button,
+  ButtonExternal,
   SectionTitle,
   ProjectContainer,
 } from "./MainProjectsElements";
@@ -59,20 +60,16 @@ const MainProjects = () => {
                       <Heading lightText={true}>{project.title}</Heading>
                       <Subtitle darkText={true}>{project.description}</Subtitle>
                       <BtnWrap>
-                        <Button
+                        <ButtonExternal
                           href={project.link}
                           target="_blank"
-                          smooth={true}
-                          duration={500}
-                          spy={true}
-                          exact={true}
                           offset={-80}
                           primary={true ? 1 : 0}
                           dark={true ? 1 : 0}
                           dark2={true ? 1 : 0}
                         >
                           Visitar
-                        </Button>
+                        </ButtonExternal>
                       </BtnWrap>
                     </TextWrapper>
                   </Column1>

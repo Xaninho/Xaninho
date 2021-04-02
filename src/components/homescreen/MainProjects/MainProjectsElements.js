@@ -132,3 +132,25 @@ export const Button = styled(LinkR)`
     color: #f5f5f5;
   }
 `;
+
+export const ButtonExternal = styled.a`
+  border-radius: 50px;
+  background: transparent;
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
+  margin-bottom: ${({ bottom }) => (bottom ? "60px" : "0")};
+  color: #00b5ad;
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: 3px solid #00b5ad;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #00b5ad;
+    color: #f5f5f5;
+  }
+`;
