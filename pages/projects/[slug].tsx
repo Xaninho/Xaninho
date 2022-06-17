@@ -28,11 +28,12 @@ export default function OneProject({ data } : any) {
 
     const router = useRouter();
 
+    const [likes, setLikes] = useState(data?.project?.likes);
+
     if (router.isFallback) {
         return <div>Loading...</div>
     }
-    const [likes, setLikes] = useState(data?.project?.likes);
-    
+
     const addLike = async () => {
         const res = await fetch("/api/handle-like", {
             method: "POST",
