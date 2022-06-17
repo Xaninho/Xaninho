@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 import { sanityClient, urlFor, PortableText} from "../../lib/sanity";
 
@@ -23,8 +24,13 @@ const projectQuery = `*[_type == "project" && slug.current == $slug][0]{
     likes
   }`;
 
-export default function OneProject({ data , preview } : any) {
+export default function OneProject({ data } : any) {
 
+    const router = useRouter();
+
+    if (router.isFallback) {
+        return <div>Loading...</div>
+    }
     const [likes, setLikes] = useState(data?.project?.likes);
     
     const addLike = async () => {
