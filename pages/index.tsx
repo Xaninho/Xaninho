@@ -27,7 +27,7 @@ const Home: NextPage = ({ projects } : InferGetStaticPropsType<typeof getStaticP
       <ul className="projects-list">
         { projects?.length > 0  && projects.map((project: any) => (
           <li key={ project._id } className="project-card">
-            <Link href="/">
+            <Link href={`/projects/${project.slug.current}`}>
             <a>
               <img src={urlFor(project.mainImage).url()}/>
               <span>{ project.name }</span>
