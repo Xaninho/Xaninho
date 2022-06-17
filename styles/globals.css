@@ -95,3 +95,15 @@ img {
 .details {
   padding: 15px;
 }
+
+.like-button {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  outline: none;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid #444;
+  padding: 5px 10px;
+  cursor: pointer;
+}

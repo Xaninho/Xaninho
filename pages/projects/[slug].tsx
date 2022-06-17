@@ -1,4 +1,6 @@
-import { sanityClient, urlFor, PortableText } from "../../lib/sanity";
+import { useState } from 'react';
+
+import { sanityClient, urlFor, PortableText} from "../../lib/sanity";
 
 const projectQuery = `*[_type == "project" && slug.current == $slug][0]{
     _id,
@@ -17,17 +19,35 @@ const projectQuery = `*[_type == "project" && slug.current == $slug][0]{
             image
         }
     },
-    details
+    details,
+    likes
   }`;
 
-export default function OneProject({ data } : any) {
+export default function OneProject({ data , preview } : any) {
+
+    const [likes, setLikes] = useState(data?.project?.likes);
+    
+    const addLike = async () => {
+        const res = await fetch("/api/handle-like", {
+            method: "POST",
+            body: JSON.stringify({ _id: project._id }),
+        }).catch( error => console.log(error))
+
+        const data = await res?.json();
+
+        setLikes(data.likes);
+    }
 
     const { project } = data;
-    console.log(data);
 
     return (
         <article className="project">
             <h1>{project.name}</h1>
+
+            <button className="like-button" onClick={ addLike }>
+                {likes} 💞
+            </button>
+
             <main className="content">
                 <img src={urlFor(project?.mainImage).url()}/>
                 <div className="breakdown">
