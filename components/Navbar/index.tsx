@@ -10,16 +10,15 @@ import {
   NavItem,
   NavLinks
 } from './NavbarElements'
-import Link from 'next/link';
 
-function Navbar() {
+function Navbar(toggle : any) {
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo href="/">
           <NavText>Portfolio</NavText>
         </NavLogo>
-        <MobileIcon>
+        <MobileIcon onClick={()=>toggle}>
           <FaBars />
         </MobileIcon>
         <NavMenu>

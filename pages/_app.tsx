@@ -1,13 +1,23 @@
 import type { AppProps } from 'next/app'
-import Link from "next/link";
+import React, {useState} from 'react'
 import Navbar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
 
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+    console.log(isOpen)
+  }
+
   return (
     <div>
-      <Navbar />
+      <Navbar toggle={toggle}/>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
       <main>
         <Component {...pageProps} />
       </main>
