@@ -10,10 +10,15 @@ import {
     SidebarRoute
 } from './SidebarElements';
 
-const Sidebar = (isOpen : boolean, {toggle} : {toggle: () => void}) => {
+type SidebarProps  = {
+    isOpen : boolean;
+    toggle : () => void;
+};
+
+const Sidebar = ({isOpen, toggle} : SidebarProps) => {
   return (
-    <SidebarContainer isOpen={isOpen} onClick={()=>toggle}>
-        <Icon onClick={()=>toggle}>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+        <Icon onClick={toggle}>
             <CloseIcon />
         </Icon>
         <SidebarWrapper>

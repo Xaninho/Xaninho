@@ -7,17 +7,16 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
-    setIsOpen(!isOpen)
-    console.log(isOpen)
+    setIsOpen(!isOpen);
   }
 
   return (
     <div>
       <Navbar toggle={toggle}/>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Sidebar isOpen={isOpen} toggle={toggle}/>
       <main>
         <Component {...pageProps} />
       </main>

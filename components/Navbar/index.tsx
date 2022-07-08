@@ -11,14 +11,18 @@ import {
   NavLinks
 } from './NavbarElements'
 
-function Navbar(toggle : any) {
+type NavbarProps = {
+  toggle : () => void;
+}
+
+function Navbar({toggle} : NavbarProps) {
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo href="/">
           <NavText>Portfolio</NavText>
         </NavLogo>
-        <MobileIcon onClick={()=>toggle}>
+        <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
         <NavMenu>
