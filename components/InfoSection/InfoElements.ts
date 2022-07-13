@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled.div<{ lightBg: boolean | undefined }>`
     color: #fff;
-    background: ${({ ligthBg }) => (ligthBg ? '#f9f9f9' : '#010606')};
+    background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -21,7 +21,7 @@ export const InfoWrapper = styled.div`
     justify-content: center;
 `
 
-export const InfoRow = styled.div`
+export const InfoRow = styled.div<{ imgStart: boolean | undefined}>`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
@@ -60,7 +60,7 @@ export const TopLine = styled.p`
     margin-bottom: 16px;
 `
 
-export const Heading = styled.h1`
+export const Heading = styled.h1<{ lightText: boolean | undefined }>`
     margin-bottom: 24px;
     font-size: 48px;
     line-height: 1.1;
@@ -72,7 +72,7 @@ export const Heading = styled.h1`
     }
 `
 
-export const Subtitle = styled.p`
+export const Subtitle = styled.p<{ darkText: boolean | undefined}>`
     max-width: 440px;
     margin-bottom: 35px;
     font-size: 18px;

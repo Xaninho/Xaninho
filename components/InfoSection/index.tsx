@@ -15,26 +15,43 @@ import {
  } from './InfoElements'
  import { HeroBtnLink } from '../HeroSection/HeroSectionElements'
 
-const InfoSection = () => {
+ type HomeObject = {
+    id?: string;
+    lightBg?: boolean;
+    lightText?: boolean;
+    lightTextDesc?: boolean;
+    topLine?: string;
+    headline?: string;
+    description?: string;
+    buttonLabel?: string;
+    imgStart?: boolean;
+    img?: any;
+    alt?: string;
+    dark?: boolean;
+    primary?: true;
+    darkText?: boolean;
+}
+
+const InfoSection = (homeObj : HomeObject) => {
   return (
-    <InfoContainer>
+    <InfoContainer lightBg={homeObj.lightBg} id={homeObj.id}>
         <InfoWrapper>
-            <InfoRow>
+            <InfoRow imgStart={homeObj.imgStart}>
 
                 <Column1>
                     <TextWrapper>
-                        <TopLine>TopLine</TopLine>
-                        <Heading>Heading</Heading>
-                        <Subtitle>Subtitle</Subtitle>
+                        <TopLine>{homeObj.topLine}</TopLine>
+                        <Heading lightText={homeObj.lightText} >{homeObj.headline}</Heading>
+                        <Subtitle darkText={homeObj.darkText}>{homeObj.description}</Subtitle>
                         <BtnWrap>
-                            <HeroBtnLink>Button</HeroBtnLink>
+                            <HeroBtnLink>{homeObj.buttonLabel}</HeroBtnLink>
                         </BtnWrap>
                     </TextWrapper>
                 </Column1>
 
                 <Column2>
                     <ImgWrap>
-                        <Img />
+                        <Img src={homeObj.img} alt={homeObj.alt}/>
                     </ImgWrap>
                 </Column2>
 
