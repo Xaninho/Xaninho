@@ -1,4 +1,3 @@
-import developerActivity from '../../images/svg-1.svg';
 
 type HomeObject = {
     id?: string;
@@ -27,7 +26,7 @@ export const HomeObjOne : HomeObject = {
     description: 'Get access to our exclusive app that allows you to send unlimited transactions witout getting charged any fees',
     buttonLabel: 'Get Started',
     imgStart: false,
-    img: require('../../public/favicon.ico').default,
+    img: './images/developer-activity.svg',
     alt: 'Car',
     dark: true,
     primary: true,
