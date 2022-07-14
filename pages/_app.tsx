@@ -4,8 +4,9 @@ import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
+import Services from '../components/Services';
 import '../styles/globals.css'
-import { HomeObjOne } from '../components/InfoSection/Data';
+import { HomeObjOne, HomeObjTwo, HomeObjThree } from '../components/InfoSection/Data';
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -21,6 +22,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Sidebar isOpen={isOpen} toggle={toggle}/>
       <HeroSection />
       <InfoSection {...HomeObjOne}/>
+      <InfoSection {...HomeObjTwo}/>
+      <Services />
+      <InfoSection {...HomeObjThree}/>
     </div>
   );
 }
