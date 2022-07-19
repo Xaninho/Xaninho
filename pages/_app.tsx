@@ -7,6 +7,7 @@ import InfoSection from '../components/InfoSection';
 import Services from '../components/Services';
 import '../styles/globals.css'
 import { HomeObjOne, HomeObjTwo, HomeObjThree } from '../components/InfoSection/Data';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <InfoSection {...HomeObjTwo}/>
       <Services />
       <InfoSection {...HomeObjThree}/>
+      <Footer />
     </div>
   );
 }
