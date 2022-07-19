@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {FaBars} from 'react-icons/fa'
 import {
   Nav,
@@ -16,8 +16,23 @@ type NavbarProps = {
 }
 
 function Navbar({toggle} : NavbarProps) {
+
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if(window.scrollY >= 80) {
+      setScrollNav(true)
+    } else {
+      setScrollNav(false)
+    }
+  }
+
+  useEffect(() => { 
+    window.addEventListener('scroll', changeNav)
+  }, [])
+
   return (
-    <Nav>
+    <Nav scrollNav={scrollNav}>
       <NavbarContainer>
         <NavLogo href="/">
           <NavText>Portfolio</NavText>
