@@ -23,7 +23,7 @@ export const HeroContainer = styled.div`
     }
 `;
 
-export const HeroBg = styled.div`
+export const HeroBackground = styled.div`
     position: absolute;
     top: 0;
     right: 0;
@@ -34,7 +34,7 @@ export const HeroBg = styled.div`
     overflow: hidden;
 `;
 
-export const VideoBg = styled.video`
+export const VideoBackground = styled.video`
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -44,22 +44,35 @@ export const VideoBg = styled.video`
 
 export const HeroContent = styled.div`
     z-index: 3;
-    max-width: 1200px;
+    max-width: 1000px;
     position: absolute;
     padding: 8px 24px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row-reverse;
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse  ;
+    }
 `;
 
-export const HeroH1 = styled.h1`
+export const AboutMe = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width: 768px) {
+        align-items: center;
+    }
+`;
+
+export const Title = styled.h1`
     color: #fff;
-    font-size: 48px;
-    text-align: center;
+    font-size: 40px;
     font-family: 'Philosopher', sans-serif;
 
     @media screen and (max-width: 768px) {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     @media screen and (max-width: 480px) {
@@ -67,15 +80,15 @@ export const HeroH1 = styled.h1`
     }
 `;
 
-export const HeroP = styled.p`
-    margin-top: 24px;
+export const Description = styled.p`
     color: #fff;
     font-size: 24px;
-    text-align: center;
-    max-width: 600px;
+    text-align: right;
+    max-width: 650px;
 
     @media screen and (max-width: 768px) {
         font-size: 24px;
+        text-align: center;
     }
 
     @media screen and (max-width: 480px) {
@@ -83,25 +96,19 @@ export const HeroP = styled.p`
     }
 `;
 
-export const HeroBtnWrapper = styled.div`
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
-export const HeroBtnLink = styled.button`
+export const DownloadButton = styled.button`
     border-radius: 50px;
-    background: #01bf71;
-    white-space: nowrap;
+    background: transparent;
+    border: 2px solid whitesmoke;
     padding: 10px 22px;
-    color: #010606;
-    font-size: 16px;
+    color: whitesmoke;
+    font-size: 20px;
     outline: none;
-    border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+    font-family: 'Philosopher', sans-serif;
+    width: 200px;
 
     &:hover {
         transition: all 0.2s ease-in-out;
@@ -109,3 +116,15 @@ export const HeroBtnLink = styled.button`
         color: #010606;
     }
 `
+
+export const ImageWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
+export const Image = styled.img`
+    width: 75%;
+    border-radius: 50%;
+    margin: auto;
+`
+

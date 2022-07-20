@@ -1,13 +1,11 @@
 import React from 'react'
 import {
-    SidebarContainer,
+    Container,
     Icon,
     CloseIcon,
-    SidebarWrapper,
-    SidebarMenu,
-    SidebarLink,
-    SideBtnWrap,
-    SidebarRoute
+    Wrapper,
+    Menu,
+    MenuLink,
 } from './SidebarElements';
 
 type SidebarProps  = {
@@ -17,21 +15,23 @@ type SidebarProps  = {
 
 const Sidebar = ({isOpen, toggle} : SidebarProps) => {
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <Container isOpen={isOpen} onClick={toggle}>
+
         <Icon onClick={toggle}>
             <CloseIcon />
         </Icon>
-        <SidebarWrapper>
-            <SidebarMenu>
-                <SidebarLink to="about">About</SidebarLink>
-                <SidebarLink to="projects">Projects</SidebarLink>
-                <SidebarLink to="blog">Blog</SidebarLink>
-            </SidebarMenu>
-            <SideBtnWrap>
-                <SidebarRoute href="/signin">Sign In</SidebarRoute>
-            </SideBtnWrap>
-        </SidebarWrapper>
-    </SidebarContainer>
+
+        <Wrapper>
+
+            <Menu>
+                <MenuLink to="about">About</MenuLink>
+                <MenuLink to="projects">Projects</MenuLink>
+                <MenuLink to="blog">Blog</MenuLink>
+            </Menu>
+
+        </Wrapper>
+
+    </Container>
   )
 }
 

@@ -13,7 +13,7 @@ import {
     ImgWrap,
     Img
  } from './InfoElements'
- import { HeroBtnLink } from '../HeroSection/HeroSectionElements'
+ import { DownloadButton } from '../HeroSection/HeroSectionElements'
 
  type HomeObject = {
     id?: string;
@@ -44,7 +44,7 @@ const InfoSection = (homeObj : HomeObject) => {
                         <Heading lightText={homeObj.lightText} >{homeObj.headline}</Heading>
                         <Subtitle darkText={homeObj.darkText}>{homeObj.description}</Subtitle>
                         <BtnWrap>
-                            <HeroBtnLink>{homeObj.buttonLabel}</HeroBtnLink>
+                            <DownloadButton>{homeObj.buttonLabel}</DownloadButton>
                         </BtnWrap>
                     </TextWrapper>
                 </Column1>

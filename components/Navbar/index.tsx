@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import {FaBars} from 'react-icons/fa'
 import {
   Nav,
-  NavbarContainer,
-  NavText,
-  NavLogo,
+  Container,
+  Title,
+  Logo,
   MobileIcon,
-  NavMenu,
-  NavItem,
-  NavLinks
+  Menu,
+  MenuItem,
+  MenuLink
 } from './NavbarElements'
 
 type NavbarProps = {
@@ -33,33 +33,40 @@ function Navbar({toggle} : NavbarProps) {
 
   return (
     <Nav scrollNav={scrollNav}>
-      <NavbarContainer>
-        <NavLogo href="/">
-          <NavText>Portfolio</NavText>
-        </NavLogo>
-        <MobileIcon onClick={toggle}>
+
+      <Container>
+
+        <Logo href="/">
+          <Title scrollNav={scrollNav}>Alexandre</Title>
+        </Logo>
+
+        <MobileIcon scrollNav={scrollNav} onClick={toggle}>
           <FaBars />
         </MobileIcon>
-        <NavMenu>
-          <NavItem>
-            <NavLinks to="/about">About</NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="/projects">Projects</NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="/blog">Blog</NavLinks>
-          </NavItem>
-        </NavMenu>
-        <NavMenu>
-          <NavItem>
-            <NavLinks to="/github">LinkedIn</NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="/github">Github</NavLinks>
-          </NavItem>
-        </NavMenu>
-      </NavbarContainer>
+
+        <Menu>
+          <MenuItem>
+            <MenuLink scrollNav={scrollNav} to="/about">About</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink scrollNav={scrollNav} to="/projects">Projects</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink scrollNav={scrollNav} to="/blog">Blog</MenuLink>
+          </MenuItem>
+        </Menu>
+
+        <Menu>
+          <MenuItem>
+            <MenuLink scrollNav={scrollNav} to="/github">LinkedIn</MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink scrollNav={scrollNav} to="/github">Github</MenuLink>
+          </MenuItem>
+        </Menu>
+
+      </Container>
+
     </Nav>
   )
 }

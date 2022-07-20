@@ -3,7 +3,7 @@ import Link from "next/link";
 import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav<{ scrollNav: boolean }>`
-  background: ${({ scrollNav }) => (scrollNav ? '#000' : 'trasparent')};
+  background: ${({ scrollNav }) => (scrollNav ? 'whitesmoke' : 'transparent')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -16,7 +16,7 @@ export const Nav = styled.nav<{ scrollNav: boolean }>`
   transition: 0.8s all ease;
 `;
 
-export const NavbarContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -26,13 +26,14 @@ export const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const NavLogo = styled(Link)`
+export const Logo = styled(Link)`
 `;
 
-export const NavText = styled.a`
-  color: #fff;
+export const Title = styled.a<{ scrollNav: boolean }>`
+  color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'whitesmoke')};
   justify-self: flex-start;
   cursor: pointer;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -41,7 +42,7 @@ export const NavText = styled.a`
   text-decoration: none;
 `;
 
-export const MobileIcon = styled.div`
+export const MobileIcon = styled.div<{ scrollNav: boolean }>`
   display: none;
 
   @media screen and (max-width: 768px) {
@@ -52,11 +53,11 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'whitesmoke')};
   }
 `;
 
-export const NavMenu = styled.ul`
+export const Menu = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
@@ -68,12 +69,12 @@ export const NavMenu = styled.ul`
   }
 `;
 
-export const NavItem = styled.li`
+export const MenuItem = styled.li`
   height: 80px;
 `;
 
-export const NavLinks = styled(LinkS)`
-  color: #fff;
+export const MenuLink = styled(LinkS)<{ scrollNav: boolean }>`
+  color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'whitesmoke')};
   display: flex;
   align-items: center;
   text-decoration: none;
