@@ -3,7 +3,7 @@ import Link from "next/link";
 import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav<{ scrollNav: boolean }>`
-  background: ${({ scrollNav }) => (scrollNav ? 'whitesmoke' : 'transparent')};
+  background: ${({ scrollNav }) => (scrollNav ? 'white' : 'transparent')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -30,7 +30,7 @@ export const Logo = styled(Link)`
 `;
 
 export const Title = styled.a<{ scrollNav: boolean }>`
-  color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'whitesmoke')};
+  color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'white')};
   justify-self: flex-start;
   cursor: pointer;
   font-family: 'Philosopher', sans-serif;
@@ -53,7 +53,7 @@ export const MobileIcon = styled.div<{ scrollNav: boolean }>`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'whitesmoke')};
+    color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'white')};
   }
 `;
 
@@ -74,7 +74,7 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuLink = styled(LinkS)<{ scrollNav: boolean }>`
-  color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'whitesmoke')};
+  color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'white')};
   display: flex;
   align-items: center;
   text-decoration: none;

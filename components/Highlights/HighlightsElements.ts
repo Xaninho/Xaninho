@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const ServicesContainer = styled.div`
+export const Container = styled.div`
     height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #010606;
+    background: rgba(0, 0, 0, 0.9);
 
     @media screen and (max-width: 768px) {
         height: 1100px;
@@ -17,7 +17,7 @@ export const ServicesContainer = styled.div`
     }
 `
 
-export const ServicesWrapper = styled.div`
+export const Wrapper = styled.div`
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
@@ -36,7 +36,7 @@ export const ServicesWrapper = styled.div`
     }
 `
 
-export const ServicesCard = styled.div`
+export const Card = styled.div`
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -55,13 +55,13 @@ export const ServicesCard = styled.div`
     }
 `
 
-export const ServicesIcon = styled.img`
+export const Icon = styled.img`
     height: 160px;
     width: 160px;
     margin-bottom: 10px;
 `
 
-export const ServicesH1 = styled.h1`
+export const Heading = styled.h1`
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 64px;
@@ -71,12 +71,33 @@ export const ServicesH1 = styled.h1`
     }
 `
 
-export const ServicesH2 = styled.h2`
+export const Title = styled.h2`
     font-size: 1rem;
     margin-bottom: 10px;
 `
 
-export const ServicesP = styled.p`
+export const Description = styled.p`
     font-size: 1rem;
     text-align: center;
+`
+
+export const Button = styled.button`
+    border-radius: 50px;
+    background: transparent;
+    border: 2px solid #01bf71;
+    padding: 10px 22px;
+    color: #01bf71;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: 'Philosopher', sans-serif;
+    width: 200px;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #01bf71;
+        color: white;
+    }
 `

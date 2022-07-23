@@ -51,7 +51,7 @@ export const HeroContent = styled.div`
     flex-direction: row-reverse;
 
     @media (max-width: 768px) {
-        flex-direction: column-reverse  ;
+        flex-direction: column-reverse;
     }
 `;
 
@@ -99,9 +99,9 @@ export const Description = styled.p`
 export const DownloadButton = styled.button`
     border-radius: 50px;
     background: transparent;
-    border: 2px solid whitesmoke;
+    border: 2px solid white;
     padding: 10px 22px;
-    color: whitesmoke;
+    color: white;
     font-size: 20px;
     outline: none;
     cursor: pointer;

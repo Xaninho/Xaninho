@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export const InfoContainer = styled.div<{ lightBg: boolean | undefined }>`
+export const Container = styled.div<{ lightBg: boolean | undefined }>`
     color: #fff;
-    background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
+    background: ${({ lightBg }) => (lightBg ? 'transparent' : '#010606')};
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -21,7 +21,7 @@ export const InfoWrapper = styled.div`
     justify-content: center;
 `
 
-export const InfoRow = styled.div<{ imgStart: boolean | undefined}>`
+export const Row = styled.div<{ imgStart: boolean | undefined}>`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
@@ -32,13 +32,13 @@ export const InfoRow = styled.div<{ imgStart: boolean | undefined}>`
     }
 `
 
-export const Column1 = styled.div`
+export const TextColumn = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col1;
 `
 
-export const Column2 = styled.div`
+export const ImageColumn = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
@@ -72,7 +72,7 @@ export const Heading = styled.h1<{ lightText: boolean | undefined }>`
     }
 `
 
-export const Subtitle = styled.p<{ darkText: boolean | undefined}>`
+export const Description = styled.p<{ darkText: boolean | undefined}>`
     max-width: 440px;
     margin-bottom: 35px;
     font-size: 18px;
@@ -80,18 +80,39 @@ export const Subtitle = styled.p<{ darkText: boolean | undefined}>`
     color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
 `
 
-export const BtnWrap = styled.div`
+export const ButtonWrap = styled.div`
     display: flex;
     justify-content: flex-start;
 `
 
-export const ImgWrap = styled.div`
-    max-width: 555px;
+export const ImageWrap = styled.div`
+    max-width: 500px;
     height: 100%;
 `
 
-export const Img = styled.img`
+export const Image = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
+`
+
+export const Button = styled.button`
+    border-radius: 50px;
+    background: transparent;
+    border: 2px solid #01bf71;
+    padding: 10px 22px;
+    color: #01bf71;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: 'Philosopher', sans-serif;
+    width: 200px;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #01bf71;
+        color: white;
+    }
 `

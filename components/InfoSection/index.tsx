@@ -1,63 +1,51 @@
 import React from 'react'
 import { 
-    InfoContainer,
+    Container,
     InfoWrapper,
-    InfoRow,
-    Column1,
+    Row,
+    TextColumn,
     TextWrapper,
     TopLine,
     Heading,
-    Subtitle,
-    BtnWrap,
-    Column2,
-    ImgWrap,
-    Img
+    Description,
+    ButtonWrap,
+    ImageColumn,
+    ImageWrap,
+    Image,
+    Button
  } from './InfoElements'
- import { DownloadButton } from '../HeroSection/HeroSectionElements'
-
- type HomeObject = {
-    id?: string;
-    lightBg?: boolean;
-    lightText?: boolean;
-    lightTextDesc?: boolean;
-    topLine?: string;
-    headline?: string;
-    description?: string;
-    buttonLabel?: string;
-    imgStart?: boolean;
-    img?: any;
-    alt?: string;
-    dark?: boolean;
-    primary?: true;
-    darkText?: boolean;
-}
+import { HomeObject } from '../../types/general'
 
 const InfoSection = (homeObj : HomeObject) => {
   return (
-    <InfoContainer lightBg={homeObj.lightBg} id={homeObj.id}>
-        <InfoWrapper>
-            <InfoRow imgStart={homeObj.imgStart}>
 
-                <Column1>
+    <Container lightBg={homeObj.lightBg} id={homeObj.id}>
+
+        <InfoWrapper>
+            <Row imgStart={homeObj.imgStart}>
+
+                <TextColumn>
                     <TextWrapper>
                         <TopLine>{homeObj.topLine}</TopLine>
                         <Heading lightText={homeObj.lightText} >{homeObj.headline}</Heading>
-                        <Subtitle darkText={homeObj.darkText}>{homeObj.description}</Subtitle>
-                        <BtnWrap>
-                            <DownloadButton>{homeObj.buttonLabel}</DownloadButton>
-                        </BtnWrap>
+                        <Description darkText={homeObj.darkText}>{homeObj.description}</Description>
+                        <ButtonWrap>
+                            <Button>{homeObj.buttonLabel}</Button>
+                        </ButtonWrap>
                     </TextWrapper>
-                </Column1>
+                </TextColumn>
 
-                <Column2>
-                    <ImgWrap>
-                        <Img src={homeObj.img} alt={homeObj.alt}/>
-                    </ImgWrap>
-                </Column2>
+                <ImageColumn>
+                    <ImageWrap>
+                        <Image src={homeObj.img} alt={homeObj.alt}/>
+                    </ImageWrap>
+                </ImageColumn>
 
-            </InfoRow>
+            </Row>
         </InfoWrapper>
-    </InfoContainer>
+
+    </Container>
+
   )
 }
 
