@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div<{ lightBg: boolean | undefined }>`
     color: #fff;
     background: ${({ lightBg }) => (lightBg ? 'transparent' : '#010606')};
+    overflow-x: hidden;
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
