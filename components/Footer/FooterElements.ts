@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Link from "next/link";
 
 export const FooterContainer = styled.footer`
     background-color: #101522;
@@ -27,9 +26,6 @@ export const FooterLinksContainer = styled.div`
 export const FooterLinksWrapper = styled.div`
     display: flex;
 
-    @media screen and (max-width: 820px) {
-        flex-direction: column;
-    }
 `;
 
 export const FooterLinkItems = styled.div`
@@ -83,7 +79,7 @@ export const SocialMediaWrap = styled.div`
     }
 `
 
-export const SocialLogo = styled.a`
+export const WebsiteName = styled.a`
     color: #fff;
     justify-self: start;
     cursor: pointer;
