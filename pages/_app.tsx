@@ -1,33 +1,20 @@
-import type { AppProps } from 'next/app'
-import React, {useState} from 'react'
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
-import HeroSection from '../components/HeroSection';
-import InfoSection from '../components/InfoSection';
-import Highlights from '../components/Highlights';
+import { AppProps } from "next/app"
 import '../styles/globals.css'
-import { HomeObjOne, HomeObjTwo } from '../components/InfoSection/Data';
-import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  }
-
-  return (
-    <div>
-      <Navbar toggle={toggle}/>
-      <Sidebar isOpen={isOpen} toggle={toggle}/>
-      <HeroSection />
-      <InfoSection {...HomeObjOne}/>
-      <Highlights />
-      <InfoSection {...HomeObjTwo}/>
-      <Footer />
-    </div>
-  );
+  return <Component {...pageProps} />
 }
+
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+//
+// MyApp.getInitialProps = async (appContext) => {
+//   // calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(appContext);
+//
+//   return { ...appProps }
+// }
 
 export default MyApp
