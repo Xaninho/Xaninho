@@ -126,5 +126,6 @@ export const Image = styled.img`
     width: 75%;
     border-radius: 50%;
     margin: auto;
+    border: 10px solid hsla(0,0%,100%,.1);
 `
 
