@@ -6,6 +6,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import developer from './developer';
 import tool from './tool';
 import project from './project';
+import article from './article';
+import blockContent from './blockContent';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -17,6 +19,8 @@ export default createSchema({
     /* Your types here! */
     developer,
     tool,
-    project
+    project,
+    article,
+    blockContent
   ]),
 })
