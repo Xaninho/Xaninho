@@ -5,20 +5,20 @@ import {
   VideoBackground,
   HeroContent,
   Title,
-} from './ArticlesHeaderElements'
+} from './SingleArticleHeaderElements'
 
-const ProjectsHeader = () => {
+const SingleArticleHeader = ({ title } : any) => {
 
   return (
 
     <HeroContainer>
 
       <HeroBackground>
-        <VideoBackground autoPlay loop muted src={'/videos/waterfall2.mp4'} />
+        <VideoBackground autoPlay loop muted src={'/videos/waterfall3.mp4'} />
       </HeroBackground>
 
       <HeroContent>
-          <Title>Articles</Title>
+          <Title>{ title }</Title>
       </HeroContent>
 
     </HeroContainer>
@@ -26,4 +26,4 @@ const ProjectsHeader = () => {
   )
 }
 
-export default ProjectsHeader;
+export default SingleArticleHeader;
