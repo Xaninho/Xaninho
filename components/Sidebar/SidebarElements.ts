@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { FaTimes } from 'react-icons/fa'
-import {Link as LinkS} from 'react-scroll'
+import Link from 'next/link'
 
 export const Container = styled.aside<{ isOpen: boolean }>`
     position: fixed;
@@ -46,7 +46,7 @@ export const Menu = styled.ul`
     }
 `;
 
-export const MenuLink = styled(LinkS)`
+export const MenuLink = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;

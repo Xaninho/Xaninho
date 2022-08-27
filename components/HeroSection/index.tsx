@@ -32,7 +32,11 @@ const HeroSection = () => {
             Currently working as a full-stack web developer and attending university after hours.
             Working on cool stuff that I share here in my free time 👌
           </Description>
-          <DownloadButton> Download CV </DownloadButton>
+
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <DownloadButton> Download CV </DownloadButton>
+          </a>
+          
 
         </AboutMe>
 

@@ -9,7 +9,7 @@ export const HomeObjOne : HomeObject = {
     headline: 'Currently working on various projects',
     description: "Right now I'm focusing on building smaller projects to gain momentum to complete bigger ones. I'm also working on a side project called 'Thesaurus' which is a simple web application that allows you to search for a word and get a list of synonyms and antonyms.",
     buttonLabel: 'Visit Projects',
-    imgStart: false,
+    link: "/projects",
     img: './images/developer-activity.svg',
     alt: 'Github Activity',
     dark: false,
@@ -31,5 +31,6 @@ export const HomeObjTwo : HomeObject = {
     alt: 'Car',
     dark: true,
     primary: true,
-    darkText: true
+    darkText: true,
+    link: "https://github.com/Xaninho"
 }

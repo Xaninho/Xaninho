@@ -30,7 +30,9 @@ const InfoSection = (homeObj : HomeObject) => {
                         <Heading lightText={homeObj.lightText} >{homeObj.headline}</Heading>
                         <Description darkText={homeObj.darkText}>{homeObj.description}</Description>
                         <ButtonWrap>
-                            <Button>{homeObj.buttonLabel}</Button>
+                            <a href={homeObj.link}>
+                                <Button>{homeObj.buttonLabel}</Button>
+                            </a>
                         </ButtonWrap>
                     </TextWrapper>
                 </TextColumn>

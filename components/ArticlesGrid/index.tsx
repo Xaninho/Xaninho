@@ -16,13 +16,12 @@ const ArticlesGrid = ({articles} : any) => {
                   
                     <Icon src={urlFor(article.mainImage).url()}/>
                     <Title>{article.title}</Title>
-                    <Title>{article.publishedAt}</Title>
                     <PortableText
                         value={article.details}
                         className="details"
                     />
 
-                    <Link href={`/projects/${article.slug.current}`}>
+                    <Link href={`/articles/${article.slug.current}`}>
                       <Button>Visit</Button>
                     </Link>
                     

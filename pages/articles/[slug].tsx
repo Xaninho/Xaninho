@@ -57,11 +57,20 @@ export async function getStaticPaths(){
             }
         }`
     );
-    return { paths, fallback: true };
+    return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params } : any){
+    
     const { slug } = params;
-    const article = await sanityClient.fetch(articleQuery, { slug });
+    let article;
+
+    try {
+        article = await sanityClient.fetch(articleQuery, { slug });
+    } catch (error) {
+        console.log(error);
+    }
+    
+    
     return { props: { data: { article } } };
 }

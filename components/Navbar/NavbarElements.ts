@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import Link from "next/link";
 import {Link as LinkS} from 'react-scroll'
 
-export const Nav = styled.nav<{ scrollNav: boolean }>`
-  background: ${({ scrollNav }) => (scrollNav ? 'white' : 'transparent')};
+export const Nav = styled.nav<{ scrollnav: boolean }>`
+  background: ${({ scrollnav }) => (scrollnav ? 'white' : 'transparent')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -29,8 +29,8 @@ export const Container = styled.div`
 export const Logo = styled(Link)`
 `;
 
-export const Title = styled.a<{ scrollNav: boolean }>`
-  color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'white')};
+export const Title = styled.a<{ scrollnav: boolean }>`
+  color: ${({ scrollnav }) => (scrollnav ? '#353535' : 'white')};
   justify-self: flex-start;
   cursor: pointer;
   font-family: 'Philosopher', sans-serif;
@@ -42,7 +42,7 @@ export const Title = styled.a<{ scrollNav: boolean }>`
   text-decoration: none;
 `;
 
-export const MobileIcon = styled.div<{ scrollNav: boolean }>`
+export const MobileIcon = styled.div<{ scrollnav: boolean }>`
   display: none;
 
   @media screen and (max-width: 768px) {
@@ -53,7 +53,7 @@ export const MobileIcon = styled.div<{ scrollNav: boolean }>`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'white')};
+    color: ${({ scrollnav }) => (scrollnav ? '#353535' : 'white')};
   }
 `;
 
@@ -69,12 +69,9 @@ export const Menu = styled.ul`
   }
 `;
 
-export const MenuItem = styled.li`
+export const MenuItem = styled.li<{ scrollnav: boolean }>`
   height: 80px;
-`;
-
-export const MenuLink = styled(LinkS)<{ scrollNav: boolean }>`
-  color: ${({ scrollNav }) => (scrollNav ? '#353535' : 'white')};
+  color: ${({ scrollnav }) => (scrollnav ? '#353535' : 'white')};
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -86,3 +83,8 @@ export const MenuLink = styled(LinkS)<{ scrollNav: boolean }>`
     border-bottom: 3px solid #01bf71;
   }
 `;
+
+export const MenuLink = styled(Link)`
+`;
+
+export const SocialMediaLink = styled.div``

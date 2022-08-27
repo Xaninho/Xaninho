@@ -13,4 +13,5 @@ export type HomeObject = {
     dark?: boolean;
     primary?: boolean;
     darkText?: boolean;
+    link: string;
 }

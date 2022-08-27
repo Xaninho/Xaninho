@@ -24,9 +24,15 @@ const Sidebar = ({isOpen, toggle} : SidebarProps) => {
         <Wrapper>
 
             <Menu>
-                <MenuLink to="about">About</MenuLink>
-                <MenuLink to="projects">Projects</MenuLink>
-                <MenuLink to="blog">Blog</MenuLink>
+                <MenuLink href="/">
+                    <span>Homepage</span>
+                </MenuLink>
+                <MenuLink href="/projects">
+                    <span>Projects</span>
+                </MenuLink>
+                <MenuLink href="/articles">
+                    <span>Articles</span>
+                </MenuLink>
             </Menu>
 
         </Wrapper>

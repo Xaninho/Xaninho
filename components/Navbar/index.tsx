@@ -8,7 +8,7 @@ import {
   MobileIcon,
   Menu,
   MenuItem,
-  MenuLink
+  MenuLink,
 } from './NavbarElements'
 
 type NavbarProps = {
@@ -32,36 +32,46 @@ function Navbar({toggle} : NavbarProps) {
   }, [])
 
   return (
-    <Nav scrollNav={scrollNav}>
+    <Nav scrollnav={scrollNav}>
 
       <Container>
 
         <Logo href="/">
-          <Title scrollNav={scrollNav}>Alexandre</Title>
+          <Title scrollnav={scrollNav}>Alexandre</Title>
         </Logo>
 
-        <MobileIcon scrollNav={scrollNav} onClick={toggle}>
+        <MobileIcon scrollnav={scrollNav} onClick={toggle}>
           <FaBars />
         </MobileIcon>
 
         <Menu>
-          <MenuItem>
-            <MenuLink scrollNav={scrollNav} to="/about">About</MenuLink>
+          <MenuItem scrollnav={scrollNav}>
+            <MenuLink href="/">
+              <span>Homepage</span>
+            </MenuLink>
           </MenuItem>
-          <MenuItem>
-            <MenuLink scrollNav={scrollNav} to="/projects">Projects</MenuLink>
+          <MenuItem scrollnav={scrollNav}>
+            <MenuLink href="/projects">
+              <span>Projects</span>
+            </MenuLink>
           </MenuItem>
-          <MenuItem>
-            <MenuLink scrollNav={scrollNav} to="/blog">Blog</MenuLink>
+          <MenuItem scrollnav={scrollNav}>
+            <MenuLink href="/articles">
+              <span>Articles</span>
+            </MenuLink>
           </MenuItem>
         </Menu>
 
         <Menu>
-          <MenuItem>
-            <MenuLink scrollNav={scrollNav} to="/github">LinkedIn</MenuLink>
+          <MenuItem scrollnav={scrollNav}>
+            <MenuLink href="https://github.com/Xaninho" target="_blank">
+              <span>Github</span>
+            </MenuLink>
           </MenuItem>
-          <MenuItem>
-            <MenuLink scrollNav={scrollNav} to="/github">Github</MenuLink>
+          <MenuItem scrollnav={scrollNav}>
+            <MenuLink href="https://www.linkedin.com/in/alexandre-hacker/" target="_blank">
+              <span>LinkedIn</span>
+            </MenuLink>
           </MenuItem>
         </Menu>
 
