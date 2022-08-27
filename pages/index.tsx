@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Head from 'next/head'
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import HeroSection from '../components/HeroSection';
@@ -17,6 +18,16 @@ function HomePage() {
 
   return (
     <div>
+      <Head>
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <meta name="keywords" content="portfolio, react, next, typescript, developer, projects" />
+        <meta name="description" content="My portfolio. Now I just need to add projects!"></meta>
+        <meta property="og:title" content="Portfolio" />
+        <meta property="og:image" content="'/images/profilePicture.jfif'" />
+        <meta charSet="utf-8"></meta>
+        <link rel="icon" href="/favicon.ico"></link>
+     </Head>
       <Navbar toggle={toggle}/>
       <Sidebar isOpen={isOpen} toggle={toggle}/>
       <HeroSection />
