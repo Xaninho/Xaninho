@@ -42,6 +42,6 @@ export default Projects;
 export const getStaticProps : GetStaticProps = async () =>{
 
   const projects = await sanityClient.fetch(projectsQuery);
-  return { props: { projects } };
+  return { props: { projects }, revalidate: 1, };
 
 }

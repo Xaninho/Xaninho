@@ -1,7 +1,6 @@
 import { urlFor } from '../../lib/sanity'
 import { Grid, Card, Icon, Title, Button } from './ProjectsGridElements'
 import { PortableText } from '../../lib/sanity'
-import Link from 'next/link'
 
 const ProjectsGrid = ({projects} : any) => {
 
@@ -21,9 +20,9 @@ const ProjectsGrid = ({projects} : any) => {
                         className="details"
                     />
 
-                    <Link href={`/projects/${project.slug.current}`}>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
                       <Button>Visit</Button>
-                    </Link>
+                    </a>
                     
                   
               </Card>

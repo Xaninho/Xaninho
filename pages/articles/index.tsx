@@ -43,6 +43,6 @@ export const getStaticProps : GetStaticProps = async () =>{
 
   const articles = await sanityClient.fetch(articlesQuery);
   console.log(articles);
-  return { props: { articles } };
+  return { props: { articles }, revalidate: 1 };
 
 }
