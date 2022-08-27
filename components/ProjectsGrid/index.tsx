@@ -20,7 +20,7 @@ const ProjectsGrid = ({projects} : any) => {
                         className="details"
                     />
 
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">
                       <Button>Visit</Button>
                     </a>
                     
