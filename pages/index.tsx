@@ -18,16 +18,21 @@ function HomePage() {
 
   return (
     <div>
+
       <Head>
+        
         <title>Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="keywords" content="portfolio, react, next, typescript, developer, projects" />
-        <meta name="description" content="My portfolio. Now I just need to add projects!"></meta>
-        <meta property="og:title" content="Portfolio" />
-        <meta property="og:image" content="'/images/profilePicture.jfif'" />
+        <meta name="description" content="My portfolio. Now I just need to add projects!"/>
+        <meta property="og:title" content="Xaninho's Portfolio" />
+        <meta property="og:image" content="https://alexandredeveloper.netlify.app/images/profilePicture.jfif" />
+        <meta property="og:description" content="My portfolio. Now I just need to add projects!" />
         <meta charSet="utf-8"></meta>
         <link rel="icon" href="/favicon.ico"></link>
-     </Head>
+        
+      </Head>
+
       <Navbar toggle={toggle}/>
       <Sidebar isOpen={isOpen} toggle={toggle}/>
       <HeroSection />
