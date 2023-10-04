@@ -1,10 +1,10 @@
 # Sup, I'm Alexandre - aka Xaninho 👋 
 ## I'm a Developer, Sports Enthusiast and Anime weeb 🥡
 
-- 💡 Currently working on side projects besides my full-time job
-- 🔭 Available to contribute to other projects
-- 🌄 I like learning about cooking, languages, exercise & mindfulness
-- ⚡ Fun fact: I don't know what Github Pro does 👀
+- 💡 Currently working on side projects to learn new tech
+- 📖 I like learning about exercise and nutrition, languages & mindfulness
+- 💪 Looking for a new gymbro
+- ⚡ I don't know what Github Pro does 👀
 
 ### Tools I mainly use:
 
